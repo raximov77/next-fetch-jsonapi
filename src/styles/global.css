@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@400;500&display=swap');
+
+:root {
+    --font-primary: 'Helvetica', sans-serif;
+
+    --color-primary: #000;
+    --color-secondary: #95959D;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        font-family: var(--font-primary);
+        font-size: 16px;
+        line-height: 1.4;
+        color: var(--color-primary) !important;
+    }
+
+    body[class^='no-scroll-'],
+    body[class*=' no-scroll-'] {
+        position: fixed;
+        inset: 0;
+        overflow: hidden;
+        touch-action: none;
+        overscroll-behavior: none;
+    }
+
+    main {
+        @apply pt-5 lg:pt-0;
+    }
+}
+
+.h1 {
+    @apply text-xl font-bold;
+}
